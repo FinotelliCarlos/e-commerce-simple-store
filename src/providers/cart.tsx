@@ -33,7 +33,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
   const [products, setProducts] = useState<CartProduct[]>([]);
 
   const addProductToCart = (product: CartProduct) => {
-    // se o produto já estiver no carrinho, apenas aumente a sua quantidade
     const productIsAlreadyOnCart = products.some(
       (cartProduct) => cartProduct.id === product.id,
     );
@@ -55,7 +54,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
       return;
     }
 
-    // se não, adicione o produto à lista
     setProducts((prev) => [...prev, product]);
   };
 

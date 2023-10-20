@@ -15,10 +15,9 @@ const Cart = () => {
         variant="outline"
       >
         <ShoppingCartIcon size={16} />
-        Catálogo
+        Carrinho
       </Badge>
 
-      {/* RENDERIZAR OS PRODUTOS */}
       <div className="flex flex-col gap-5">
         {products.map((product) => (
           <CartItem
