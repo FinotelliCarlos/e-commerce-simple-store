@@ -1,10 +1,10 @@
 import {
+  HeadphonesIcon,
   KeyboardIcon,
   MonitorIcon,
-  HeadphonesIcon,
-  SquareIcon,
-  SpeakerIcon,
   MouseIcon,
+  SpeakerIcon,
+  SquareIcon,
 } from "lucide-react";
 
 export const CATEGORY_ICON = {

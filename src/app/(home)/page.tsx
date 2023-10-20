@@ -1,7 +1,7 @@
-import Categories from "./components/categories";
 import { prismaClient } from "@/lib/prisma";
 import ProductList from "../../components/ui/product-list";
 import SectionTitle from "../../components/ui/section-title";
+import Categories from "./components/categories";
 import PromoBanner from "./components/promo-banner";
 
 export default async function Home() {
@@ -47,7 +47,7 @@ export default async function Home() {
 
       <PromoBanner
         src="/banner-home-02.png"
-        alt="Até 55% de desconto em mouses!"
+        alt="Até 55% de desconto em teclados!"
       />
 
       <div>
