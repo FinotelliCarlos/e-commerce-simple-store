@@ -83,15 +83,29 @@ const Header = () => {
               </Button>
             )}
 
-            <Button variant="outline" className="w-full justify-start gap-2">
-              <HomeIcon size={16} />
-              Início
-            </Button>
+            <SheetClose asChild>
+              <Link href="/">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start gap-2"
+                >
+                  <HomeIcon size={16} />
+                  Início
+                </Button>
+              </Link>
+            </SheetClose>
 
-            <Button variant="outline" className="w-full justify-start gap-2">
-              <PercentIcon size={16} />
-              Ofertas
-            </Button>
+            <SheetClose asChild>
+              <Link href="/">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start gap-2"
+                >
+                  <PercentIcon size={16} />
+                  Ofertas
+                </Button>
+              </Link>
+            </SheetClose>
 
             <SheetClose asChild>
               <Link href="/catalog">
@@ -106,14 +120,16 @@ const Header = () => {
             </SheetClose>
 
             {status === "authenticated" && (
-              <Button
-                onClick={handleLogoutClick}
-                variant="destructive"
-                className="w-full justify-start gap-2"
-              >
-                <LogOutIcon size={16} />
-                Sair
-              </Button>
+              <SheetClose asChild>
+                <Button
+                  onClick={handleLogoutClick}
+                  variant="destructive"
+                  className="w-full justify-start gap-2"
+                >
+                  <LogOutIcon size={16} />
+                  Sair
+                </Button>
+              </SheetClose>
             )}
           </div>
         </SheetContent>
