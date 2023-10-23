@@ -5,7 +5,7 @@ declare namespace NodeJS {
     GOOGLE_CLIENT_SECRET: string;
 
     NEXT_PUBLIC_STRIPE_PUBLIC_KEY: string;
-    STRIPE_SECRET_KEY: string;
+    NEXT_STRIPE_SECRET_KEY: string;
     STRIPE_WEBHOOK_STRIPE_KEY: string;
   }
 }

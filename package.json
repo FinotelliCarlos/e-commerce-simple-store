@@ -10,6 +10,7 @@
     "seed": "npx prisma db seed",
     "studio": "npx prisma studio",
     "lint": "next lint",
+    "prepare": "prisma generate",
     "stripe:listen": "stripe listen --forward-to localhost:3000/api/order/payment-success"
   },
   "prisma": {
