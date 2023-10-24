@@ -14,7 +14,7 @@ const DealsPage = async () => {
   });
 
   return (
-    <div className="flex flex-col gap-5 p-5">
+    <div className="container flex flex-col gap-5 p-5">
       <Badge
         className="w-fit gap-1 border-2 border-primary px-3 py-[0.375rem] text-base uppercase"
         variant="outline"
@@ -23,7 +23,7 @@ const DealsPage = async () => {
         Ofertas
       </Badge>
 
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-2 gap-8 sm:flex sm:flex-wrap">
         {deals.map((product) => {
           return (
             <ProductItem

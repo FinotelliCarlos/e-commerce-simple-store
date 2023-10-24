@@ -49,7 +49,7 @@ export default async function Home() {
         <Categories />
       </div>
 
-      <div className="items-left mx-auto flex w-full max-w-[1440px] flex-col justify-center">
+      <div className="items-left container mx-auto flex w-full flex-col justify-center">
         <SectionTitle>Ofertas</SectionTitle>
         <ProductList products={deals} />
       </div>
@@ -73,7 +73,7 @@ export default async function Home() {
         />
       </div>
 
-      <div className="items-left mx-auto flex w-full max-w-[1440px] flex-col justify-center">
+      <div className="items-left container mx-auto flex w-full flex-col justify-center">
         <SectionTitle>Teclados</SectionTitle>
         <ProductList products={keyboards} />
       </div>
@@ -90,7 +90,7 @@ export default async function Home() {
         className="hidden w-full p-5 sm:block"
       />
 
-      <div className="items-left mx-auto flex w-full max-w-[1440px] flex-col justify-center">
+      <div className="items-left container mx-auto flex w-full flex-col justify-center">
         <SectionTitle>Mouses</SectionTitle>
         <ProductList products={mouses} />
       </div>
