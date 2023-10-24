@@ -29,7 +29,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
   };
 
   return (
-    <div className="flex flex-col px-5">
+    <div className="flex h-full flex-col px-5 sm:rounded-lg sm:py-5 md:max-w-[470px] md:bg-accent">
       <h2 className="text-lg">{product.name}</h2>
 
       <div className="flex items-center gap-2">
@@ -79,7 +79,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
         Adicionar ao carrinho
       </Button>
 
-      <div className="mt-5 flex items-center justify-between rounded-lg bg-accent px-5 py-2">
+      <div className="mt-5 flex items-center justify-between rounded-lg bg-accent px-5 py-2 sm:rounded-lg sm:bg-zinc-700">
         <div className="flex items-center gap-2">
           <TruckIcon />
 

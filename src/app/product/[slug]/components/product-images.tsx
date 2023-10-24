@@ -16,43 +16,45 @@ const ProductImages = ({ imageUrls, name }: ProductImagesProps) => {
   };
 
   return (
-    <div className="flex flex-col">
-      <div className="flex h-[380px] w-full items-center justify-center bg-accent">
-        <Image
-          src={currentImage}
-          alt={name}
-          height={0}
-          width={0}
-          sizes="100vw"
-          className="h-auto max-h-[70%] w-auto max-w-[80%]"
-          style={{
-            objectFit: "contain",
-          }}
-        />
-      </div>
+    <div className="mb-8 flex flex-col">
+      <div className="sm:relative sm:h-full">
+        <div className="flex h-full min-h-[380px] items-center justify-center bg-accent sm:rounded-lg md:min-h-[630px]">
+          <Image
+            src={currentImage}
+            alt={name}
+            height={0}
+            width={0}
+            sizes="100vw"
+            className="h-auto max-h-[70%] w-auto max-w-[80%]"
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        </div>
 
-      <div className="mt-8 grid grid-cols-4 gap-4 px-5">
-        {imageUrls.map((imageUrl) => (
-          <button
-            key={imageUrl}
-            className={`flex h-[100px] items-center justify-center rounded-lg bg-accent
+        <div className="mt-8 grid grid-cols-4 gap-2 px-5 sm:absolute sm:left-1 sm:top-1 sm:flex sm:flex-col ">
+          {imageUrls.map((imageUrl) => (
+            <button
+              key={imageUrl}
+              className={`flex h-[80px] w-[80px] items-center justify-center rounded-lg bg-accent sm:h-[60px] sm:w-[60px] sm:bg-zinc-950 md:h-[80px] md:w-[80px]
                 ${
                   imageUrl === currentImage &&
                   "border-2 border-solid border-primary"
                 }
             `}
-            onClick={() => handleImageClick(imageUrl)}
-          >
-            <Image
-              src={imageUrl}
-              alt={name}
-              height={0}
-              width={0}
-              sizes="100vw"
-              className="h-auto max-h-[70%] w-auto max-w-[80%]"
-            />
-          </button>
-        ))}
+              onClick={() => handleImageClick(imageUrl)}
+            >
+              <Image
+                src={imageUrl}
+                alt={name}
+                height={0}
+                width={0}
+                sizes="100vw"
+                className="h-auto max-h-[70%] w-auto max-w-[80%]"
+              />
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
