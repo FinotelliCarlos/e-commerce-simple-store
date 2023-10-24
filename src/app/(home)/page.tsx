@@ -31,16 +31,25 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col gap-8 py-8">
+      <div className="w-screen">
+        <PromoBanner
+          src="/banner-ofertas.png"
+          alt="Ofertas imperdiveis, até 55% de desconto esse mês!"
+          className="hidden w-full sm:block"
+        />
+      </div>
+
       <PromoBanner
         src="/banner-home-01.png"
         alt="Até 55% de desconto esse mês!"
+        className="block w-full px-5 sm:hidden"
       />
 
       <div className="px-5">
         <Categories />
       </div>
 
-      <div>
+      <div className="items-left mx-auto flex w-full max-w-[1440px] flex-col justify-center">
         <SectionTitle>Ofertas</SectionTitle>
         <ProductList products={deals} />
       </div>
@@ -48,21 +57,40 @@ export default async function Home() {
       <PromoBanner
         src="/banner-home-02.png"
         alt="Até 55% de desconto em teclados!"
+        className="block w-full px-5 sm:hidden"
       />
 
-      <div>
+      <div className="flex items-center justify-center gap-9">
+        <PromoBanner
+          src="/banner-home-02.png"
+          alt="Até 55% de desconto em teclados!"
+          className="hidden w-full max-w-[600px] sm:block"
+        />
+        <PromoBanner
+          src="/banner-home-03.png"
+          alt="Até 55% de desconto em teclados!"
+          className="hidden w-full max-w-[600px] sm:block"
+        />
+      </div>
+
+      <div className="items-left mx-auto flex w-full max-w-[1440px] flex-col justify-center">
         <SectionTitle>Teclados</SectionTitle>
         <ProductList products={keyboards} />
       </div>
 
-      <div>
-        <PromoBanner
-          src="/banner-home-03.png"
-          alt="Até 55% de desconto em mouses!"
-        />
-      </div>
+      <PromoBanner
+        src="/banner-home-03.png"
+        alt="Até 55% de desconto em mouses!"
+        className="block w-full px-5 sm:hidden"
+      />
 
-      <div>
+      <PromoBanner
+        src="/banner-fretegrátis.png"
+        alt="Até 55% de desconto em teclados!"
+        className="hidden w-full p-5 sm:block"
+      />
+
+      <div className="items-left mx-auto flex w-full max-w-[1440px] flex-col justify-center">
         <SectionTitle>Mouses</SectionTitle>
         <ProductList products={mouses} />
       </div>
