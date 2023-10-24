@@ -4,7 +4,7 @@ import { computeProductTotalPrice } from "@/helpers/product";
 import { CartContext } from "@/providers/cart";
 import { loadStripe } from "@stripe/stripe-js";
 import { ShoppingCartIcon } from "lucide-react";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useContext } from "react";
 import { Badge } from "./badge";
 import { Button } from "./button";
@@ -17,9 +17,13 @@ const Cart = () => {
   const { products, subTotal, total, totalDiscount } = useContext(CartContext);
 
   const handleFinishPurchaseClick = async () => {
-    await createOrder(products, (data?.user as any).id);
+    if (!data?.user) {
+      await signIn();
+    }
 
-    const checkout = await createCheckout(products);
+    const order = await createOrder(products, (data?.user as any).id);
+
+    const checkout = await createCheckout(products, order.id);
 
     const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
